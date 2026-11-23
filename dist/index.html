@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fbfaf8"><meta name="description" content="Create a scrolling presentation with an editable cherry blossom template in Petal Studio.">
+<title>Cherry Blossom · Petal Studio</title>
+<link rel="icon" href="./assets/petal.svg"><link rel="stylesheet" href="./assets/fonts.css"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#library" aria-label="Petal Studio template library"><img src="./assets/petal.svg" alt="">Petal Studio</a>
+<button class="mobile-menu plain" id="mobile-menu" aria-label="Open navigation" aria-expanded="false"></button>
+<div class="breadcrumbs" id="crumbs"></div>
+<button class="profile" id="profile" title="My presentations" aria-label="Open my presentations">PS</button>
+</header>
+<aside class="sidebar" id="sidebar">
+<div class="nav-group"><h2>Workspace</h2><nav id="workspace-nav"></nav></div>
+<div class="nav-group collections"><h2>Collections</h2><nav><a href="#botanical" data-nav="botanical"><span class="collection-dot"></span>Botanical<span class="nav-count">1</span></a></nav></div>
+<div class="sidebar-foot"><span class="foot-icon" id="foot-icon"></span><div><strong>Personal workspace</strong><small>Saved on this device</small></div></div>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main id="main"></main>
+<dialog id="editor"><form id="edit-form"><div class="dialog-head"><div><small id="edit-num"></small><h2>Edit scene</h2></div><button type="button" class="icon-button" id="edit-x" aria-label="Close editor"></button></div>
+<label for="edit-kicker">Small heading</label><input id="edit-kicker" maxlength="65">
+<label for="edit-title">Heading</label><input id="edit-title" maxlength="120" required>
+<label for="edit-body">Text</label><textarea id="edit-body" maxlength="700" rows="4"></textarea>
+<label for="edit-image">Image</label><div class="upload-row"><img id="upload-preview" alt="Current scene image" hidden><label class="upload-button" for="edit-image">Choose image</label><input type="file" accept="image/*" id="edit-image"><button type="button" class="text-btn" id="remove-image">Remove</button></div>
+<p class="error" id="edit-error" role="alert"></p><div class="dialog-actions"><button class="btn" type="button" id="edit-cancel">Cancel</button><button class="btn primary" id="edit-save">Save changes</button></div></form></dialog>
+<dialog id="presenter" aria-label="Scrolling presentation"><div id="present-stage"></div><button class="present-close" aria-label="Exit presentation" id="present-close"></button></dialog>
+<div id="notice" role="status"></div><script src="./app.js"></script>
+</body></html>

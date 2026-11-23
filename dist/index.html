@@ -11,7 +11,7 @@
 <a class="brand" href="#library" aria-label="Petal Studio template library"><img src="./assets/petal.svg" alt="">Petal Studio</a>
 <button class="mobile-menu plain" id="mobile-menu" aria-label="Open navigation" aria-expanded="false"></button>
 <div class="breadcrumbs" id="crumbs"></div>
-<button class="profile" id="profile" title="My presentations" aria-label="Open my presentations">PS</button>
+<button class="profile" id="profile" title="Switch workspace" aria-label="Switch workspace">PS</button>
 </header>
 <aside class="sidebar" id="sidebar">
 <div class="nav-group"><h2>Workspace</h2><nav id="workspace-nav"></nav></div>
@@ -20,10 +20,8 @@
 </aside>
 <div class="scrim" id="scrim"></div>
 <main id="main"></main>
-<dialog id="editor"><form id="edit-form"><div class="dialog-head"><div><small id="edit-num"></small><h2>Edit scene</h2></div><button type="button" class="icon-button" id="edit-x" aria-label="Close editor"></button></div>
-<label for="edit-kicker">Small heading</label><input id="edit-kicker" maxlength="65">
-<label for="edit-title">Heading</label><input id="edit-title" maxlength="120" required>
-<label for="edit-body">Text</label><textarea id="edit-body" maxlength="700" rows="4"></textarea>
+<dialog id="profiles" aria-labelledby="profiles-title"><form id="profile-form"><div class="dialog-head"><h2 id="profiles-title">Workspaces</h2><button type="button" class="icon-button" onclick="this.closest('dialog').close()" aria-label="Close">×</button></div><p>Each workspace keeps its own presentations on this device.</p><label for="workspace-list">Choose workspace</label><div class="profile-row"><select id="workspace-list"></select><button type="button" class="btn" id="switch-profile">Open</button></div><label for="workspace-name">New workspace name</label><div class="profile-row"><input id="workspace-name" maxlength="40" required placeholder="Your name"><button class="btn primary">Create</button></div></form></dialog>
+<dialog id="editor"><form id="edit-form"><div class="dialog-head"><div><small id="edit-num"></small><h2>Scene image</h2></div><button type="button" class="icon-button" id="edit-x" aria-label="Close editor"></button></div>
 <label for="edit-image">Image</label><div class="upload-row"><img id="upload-preview" alt="Current scene image" hidden><label class="upload-button" for="edit-image">Choose image</label><input type="file" accept="image/*" id="edit-image"><button type="button" class="text-btn" id="remove-image">Remove</button></div>
 <p class="error" id="edit-error" role="alert"></p><div class="dialog-actions"><button class="btn" type="button" id="edit-cancel">Cancel</button><button class="btn primary" id="edit-save">Save changes</button></div></form></dialog>
 <dialog id="presenter" aria-label="Scrolling presentation"><div id="present-stage"></div><button class="present-close" aria-label="Exit presentation" id="present-close"></button></dialog>
